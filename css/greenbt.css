@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+
+:root {
+  --clr-neon-green: hsl(130, 100%, 50%);
+}
+
+.neon-green {
+  font-size: 1.5rem;
+  font-family: 'Dosis', sans-serif;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon-green);
+  border: var(--clr-neon-green) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  margin: 0 20px;
+  letter-spacing: 2px;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon-green),
+    0 0 0.5em 0 var(--clr-neon-green);
+
+  position: relative;
+}
+
+.neon-green::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  background: var(--clr-neon-green);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon-green::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon-green);
+  opacity: 0;
+  background-color: var(--clr-neon-green);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-green:hover,
+.neon-green:focus {
+  text-shadow: none;
+}
+
+.neon-green:hover::before,
+.neon-green:focus::before {
+  opacity: 1;
+}
+.neon-green:hover::after,
+.neon-green:focus::after {
+  opacity: 1;
+}
