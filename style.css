@@ -24,7 +24,7 @@ body {
 .nav {
   border-bottom: 5px solid rgb(3, 169, 235);
   position: fixed;
-  background: #050f2fb2;
+  background: #050f2f;
   top: 0;
   left: 0;
   right: 0;
@@ -51,19 +51,19 @@ body {
 }
 
 .nav a {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 7px 15px;
   transition: all 0.3s ease-in-out;
 }
 
 .nav.active {
-  background: rgba(255, 255, 255, 0.863);
+  background: rgb(42, 1, 88);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav.active a {
-  color: rgb(7, 7, 7);
+  color: rgb(255, 255, 255);
 }
 
 .nav.active .container {
@@ -83,14 +83,16 @@ body {
 /*main-content*/
 .main-content {
   background-color: rgb(255, 255, 255);
-  height: 100vh;
-  color: rgb(14, 2, 34);
+  height: 50vh;
+  color: rgb(57, 6, 138);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
+  padding: 20px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   z-index: -2;
 }
 
