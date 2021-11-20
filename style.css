@@ -80,6 +80,20 @@ body {
   font-weight: bold;
 }
 
+/*main-content*/
+.main-content {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  color: rgb(14, 2, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+
 /* hero content*/
 
 .hero {
